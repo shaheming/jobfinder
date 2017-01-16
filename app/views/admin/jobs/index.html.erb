@@ -1,0 +1,15 @@
+<div class="pull-right">
+	<%= link_to("Add a Job",new_job_path,:class=>"btn btn-default") %>
+</div>
+<table class="table table-boldered">
+	<thead>
+		<td>Jobs </td>
+		<td>CreatedAt</td>
+	</thead>
+	<tbody>
+
+		<%= render :partial=>"job", :collection=>@jobs,:as=>:job %>
+	</tbody>
+
+	
+</table>
