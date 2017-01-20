@@ -1,8 +1,16 @@
 <tr>
 	<td>
-	    <%= render_job_status(job)  %>
+		<%= render_job_status(job)  %>
 	<%= link_to(job.title,job_path(job)) %></td>
 	<td><%= job.created_at  %></td>
 	<td><%= link_to("Edit",edit_admin_job_path(job)) %> |
-	<%= link_to("Destroy",admin_job_path(job),:method=>:delete,:data=>{:confirm=>"Are you sure?"}) %></td>
+	<%= link_to("Destroy",admin_job_path(job),:method=>:delete,:data=>{:confirm=>"Are you sure?"}) %>
+		<% if job.is_hidden %>
+		<%= link_to("Publish",publish_admin_job_path(job),:method=> :post,:class=>"btn btn-xs btn-default") %>
+			
+		<% else %>
+			<%= link_to("Hide",hide_admin_job_path(job),:method=> :post,:class=>"btn btn-xs btn-default") %>
+		<% end %>
+
+	</td>
 </tr>
