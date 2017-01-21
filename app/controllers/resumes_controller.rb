@@ -12,12 +12,17 @@ class ResumesController < ApplicationController
     @resume = Resume.new(resume_params)
     @resume.job = @job
     @resume.user = current_user
-
-    if @resume.save
-    
-      redirect_to job_path(@job),notice: "upload successfully!"
+    if current_user.is_member_of?(@job)
+      flash[:warning] = "You have applied this position!"
+      redirect_to job_path(@job)
     else
-      render :new
+      if @resume.save
+        current_user.join!(@job)
+        redirect_to job_path(@job),notice: "upload successfully!"
+      else
+        render :new
+      end
+
     end
   end
 
