@@ -12,5 +12,9 @@ Rails.application.routes.draw do
       resources :resumes
   	end
   end
+
+  namespace :account do
+    resources :jobs
+  end
   root "welcome#index"
 end
