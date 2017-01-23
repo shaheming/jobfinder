@@ -1,11 +1,8 @@
-<div class="container">
-	<div class="panel panel-default" style="max-width: 720px; margin-top: 15%; margin-left: 25%;	 margin-bottom: 20%">
+<div class="container" style="max-width: 720px; margin-top: 10%; margin-left: 25%;	 margin-bottom: 15%">
+<h1 style="color:black;" class="text-center" "> <%= @job.title  %></h1>
+	<div class="panel panel-default"  style="margin-top: 20px;">
 	<div class="panel-body">
-		<h1 style="color:black;" class="text-center"> <%= @job.title  %></h1>
-		<hr>
 		<p><%=simple_format(@job.description)  %></p>
-
-
 	</div>
 	<div class="panel-footer">
 		<div class="text-center">
