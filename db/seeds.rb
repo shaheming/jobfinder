@@ -15,14 +15,14 @@ create_account_user = User.create([email: "b@b.com", password:"123456",password_
 
 puts "User account created."
 
-create_jobs = for i in 1..10 do 
+create_jobs = for i in 1..30 do 
 	Job.create!([title: "Job no.#{i}",description: "this is #{i}th public job created by seed", wage_upper_bound: rand(50..99)*100,
 		wage_lower_bound: rand(10..49)*100, is_hidden:"false",location:"Beijing",company:"Google"])
 end
 
 puts "10 Public jobs created."
 
-create_jobs = for i in 1..10 do 
+create_jobs = for i in 1..30 do 
 	Job.create!([title: "Job no.#{i}",description: "this is #{i}th hidden job created by seed", wage_upper_bound: rand(50..99)*100,
 		wage_lower_bound: rand(10..49)*100, is_hidden:"true",location:"Beijing",company:"Google"])
 end
