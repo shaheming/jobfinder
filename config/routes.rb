@@ -17,4 +17,9 @@ Rails.application.routes.draw do
     resources :jobs
   end
   root "welcome#index"
+
+
+  controller :pages do
+  get :about
+end
 end

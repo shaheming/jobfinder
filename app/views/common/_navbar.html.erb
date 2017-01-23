@@ -9,7 +9,7 @@
 			</button>
 
 				<!-- <img src="images/logo.png" alt="logo"> -->
-				<a class="navbar-brand" href="/">Job Listing</a>
+				<a class="navbar-brand" href="/">Job Finder</a>
 			</a>
 		</div>
 		
@@ -18,7 +18,7 @@
 				<li>
 					<%= link_to("Explore",jobs_path) %>
 				</li>
-				<li><a href="#">About Us</a></li>
+				<li><a href="#"><%= link_to("About",about_path) %></a></li>
 				<li class="dropdown">
 					<% if !current_user %>
 					<li><%= link_to("Log In",new_user_session_path) %></li>
