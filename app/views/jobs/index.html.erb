@@ -1,6 +1,10 @@
 <!-- <div class="pull-right">
 			<%= link_to("Add a Job",new_job_path,:class=>"btn btn-default") %>
 </div> -->
+
+
+<section class="featured-jobs">
+    <div class="container">
 <div class="dropdown clearfix pull-right">
 	<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider"
 	data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -21,17 +25,13 @@
 	</ul>
 	
 </div>
-<table class="table table-boldered">
-	<thead>
-		<td>Jobs </td>
-		<td>Wage lower bound</td>
-		<td>Wage upper bound</td>
-		<td>Location</td>
-		<td>Company</td>
-		<td>CreatedAt</td>
-	</thead>
-	<tbody>
-		<%= render :partial=>"job", :collection=>@jobs,:as=>:job %>
-	</tbody>
-	
-</table>
+
+
+
+
+		<div class="center-block"><h1 style="color:black;">Available jobs</h1></div>
+
+	<%= render :partial=>"job", :collection=>@jobs,:as=>:job %>
+
+</div>	
+</section>		
