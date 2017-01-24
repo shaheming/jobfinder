@@ -12,7 +12,7 @@ class User < ApplicationRecord
     is_admin
   end
 
-  def is_member_of?(job)
+  def has_applied?(job)
   	applied_jobs.include?(job)
   end
 
@@ -23,4 +23,6 @@ class User < ApplicationRecord
   def quit!(job)
     applied_jobs.delete(job)
   end
+
+  
 end
