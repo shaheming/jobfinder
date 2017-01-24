@@ -943,6 +943,14 @@ a.accordion-toggle  i {
 }
 
 /******************
+ navbar
+ ******************/
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;//圆角为0
+    }
+}
+/******************
  log in css
  ******************/
 .devise-button .sign-up {
