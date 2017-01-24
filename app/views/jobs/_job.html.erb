@@ -35,19 +35,16 @@
 				</div>
 			</div>
 			
-
 		</div>
-			<div class="row justify-content-center">
-				<div class=" col-md-12" >
+		<div class="row justify-content-center">
+			<div class=" col-md-12" >
 				<% if current_user &&current_user.has_applied?(job) %>
 				<%= link_to("Has applied",job_path(job),:class=> "btn btn-danger disabled", :style=>"margin-left:35%;margin-top:15px;")%>
 				<% else %>
-					<%= link_to("Apply job",job_path(job),:class=> "btn btn-danger", :style=>"margin-left:35%;margin-top:15px;")%>
+				<%= link_to("Apply job",job_path(job),:class=> "btn btn-danger", :style=>"margin-left:35%;margin-top:15px;")%>
 				<% end %>
-
-				</div>
-
 			</div>
+		</div>
 		<div>
 		</div>
 	</div>

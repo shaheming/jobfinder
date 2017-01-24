@@ -1,17 +1,23 @@
+<div class="row applied-jobs">
 
-<table class="table table-boldered table-striped custab" >
-	<thead>
-		<td>Jobs </td>
-		<td>Wage lower bound</td>
-		<td>Wage upper bound</td>
-		<td>Location</td>
-		<td>Company</td>
-		<td>CreatedAt</td>
-	</thead>
-	<tbody>
-
-		<%= render :partial=>"job", :collection=>@jobs,:as=>:job %>
-	</tbody>
-
+<div class="container"> 
+<div class="row  col-md-9 col-md-offset-1 custyle">
 	
-</table>
+	<table class="table table-boldered table-striped custab" >
+		<thead>
+			<td>Jobs</td>
+			<td>Wage</td>
+			<td>Location</td>
+			<td>Company</td>
+			<td>CreatedAt</td>
+		</thead>
+		<tbody>
+			<%= render :partial=>"job", :collection=>@jobs,:as=>:job %>
+		</tbody>
+		
+	</table>
+</div>
+
+</div>
+	
+</div>

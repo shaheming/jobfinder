@@ -1098,3 +1098,61 @@ margin-top:20%;
 margin-bottom: 20%;
 
 }
+
+
+.applied-jobs{
+  
+  background-image: url("http://r.photo.store.qq.com/psb?/V11mqdez1kYrfX/fxT8kJ05wMiaWVSEP6ANLd5Q*GFsbJhFlLYSLeSfzng!/r/dHgBAAAAAAAA.png");
+  margin-left: -15px;
+  margin-right: -30px;
+  height: 730px;
+  width: 1430px;
+  background-size: cover;
+
+}
+
+
+
+.resume-upload{
+    background-image: url("http://r.photo.store.qq.com/psb?/V11mqdez1kYrfX/fxT8kJ05wMiaWVSEP6ANLd5Q*GFsbJhFlLYSLeSfzng!/r/dHgBAAAAAAAA.png");
+  margin-left: -15px;
+  margin-right: -30px;
+  height: 730px;
+  width: 1430px;
+  background-size: cover;
+
+
+
+}
+.container.panel-resume-upload{
+  position: relative;
+  top: 25%;
+}
+
+.resume-upload-head{
+    position: relative;
+  color: black;
+  top: 10%;
+  text-align: center;
+
+}
+
+.panel.panel-resume-upload{
+   background: rgba(255, 255, 255, 0.8);
+
+}
+/******************
+ applied_jobs
+ ******************/
+
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }

@@ -1,20 +1,19 @@
-<div class="container" style="margin-top: 10%;margin-bottom: 10%;max-width: 720px;">
-	<div class="row">
-		<div class="col-md-12">
-			<h1 class="text-center" style="color: black;">Upload resume to <%= @job.title %></h1>
-		</div>
-	</div>
-	<div class="panel panel-default">
-		<div class="panel-body">
-			<div class="trix-content">
-				<%= simple_form_for [@job, @resume] do |f| %>
-				<%= f.input :content %>
+<div class="row resume-upload">
+<div class="container panel-resume-upload"> 
+		<div class="panel panel-default panel-resume-upload  col-md-6 col-md-offset-3">
+			<div >
+				<h1 class="resume-upload-head">Upload resume</h1>
 			</div>
-			<div class="panel-footer">
-				<div class="row">
-					<div class="col-md-6" ><%= f.input :attachment%></div>
-					<div class="col-md-6"><%= f.submit "Send" ,:class => "btn-danger btn" ,:style=>"margin-left: 50%; margin-top:20px;"%></div>
+			<div class="panel-body">
+				<%= simple_form_for [@job, @resume] do |f| %>
+				<div class="trix-content">
+					<%= f.input :content ,label: false, autofocus: true ,placeholder: 'Enter content*',:input_html => {:style => 'height: 100px'}%>
 				</div>
+
+					<div class="row">
+						<div class="col-md-6" ><%= f.input :attachment, label: false %></div>
+						<div class="col-md-6"><%= f.submit "Send" ,:class => "btn-danger btn",:style=>"position:relative;left:75%;" %></div>
+					</div>
 				<% end %>
 			</div>
 		</div>
