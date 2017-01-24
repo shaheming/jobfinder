@@ -1,16 +1,20 @@
-<div class="container" style="max-width: 720px; margin-top: 10%; margin-left: 25%;	 margin-bottom: 15%">
-<h1 style="color:black;" class="text-center" "> <%= @job.title  %></h1>
-	<div class="panel panel-default"  style="margin-top: 20px;">
-	<div class="panel-body">
-		<p><%=simple_format(@job.description)  %></p>
-	</div>
-	<div class="panel-footer">
-		<div class="text-center">
-			<%= link_to("Upload", new_job_resume_path(@job), :class=> "btn btn-danger") %>
+<div class="row jobs-show">
+	<div  class="jobs-show-panel" >
+		
+		<div class="panel panel-default jobs-show-panel" >
+			<h1 class="jobs-show-header"> <%= @job.title %></h1>
+			<br>
+			<div class="panel-body">
+				<p><%=simple_format(@job.description)  %></p>
+			</div>
+			<hr>
+			<div class="text-center">
+				<% if current_user &&current_user.has_applied?(@job) %>
+				 <%= link_to("Reupload","#",:class=> "btn btn-danger")%>
+				<% else %>
+				<%= link_to("Upload",new_job_resume_path(@job),:class=> "btn btn-danger")%>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>
-
-
-</div>
-

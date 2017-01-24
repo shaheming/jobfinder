@@ -1159,8 +1159,6 @@ ul.social_icons li  a i {
   z-index: 0;
 }
 
-
-
 /*************************
 ********* Portfolio CSS ******
 **************************/
@@ -1262,8 +1260,6 @@ ul.social_icons li  a i {
   -o-transition: none;
   transition: none;
 }
-
-
 
 /***********************
 ********* Footer ******
@@ -1386,26 +1382,48 @@ ul.social_icons li  a i {
   margin-right: -30px;
   height: 730px;
   width: 1430px;
-  background-size:cover;
+  background-size: cover;
 }
-
-.reg-panel{
-   position:relative;
-   top:150px;
-
-   background: rgba(255, 255, 255, 0.8);
-    border-radius: 0px;
+.reg-panel {
+  position: relative;
+  top: 150px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0px;
 }
-
-.reg-btn{
-      width: 100%;
+.reg-btn {
+  width: 100%;
 }
-
-.user-reg-log-head{
-  
+.user-reg-log-head {
   font-size: 2em;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
   text-align: center;
-  color:black;
+  color: black;
+}
+.jobs-show {
+  background-image: url("http://r.photo.store.qq.com/psb?/V11mqdez1kYrfX/fxT8kJ05wMiaWVSEP6ANLd5Q*GFsbJhFlLYSLeSfzng!/r/dHgBAAAAAAAA.png");
+  margin-left: -15px;
+  margin-right: -30px;
+  height: 730px;
+  width: 1430px;
+  background-size: cover;
+}
+.jobs-show-panel {
+  position: relative;
+  max-width: 720px;
+   top: 25%;
+   left: 15%;
+
 }
 
+
+.panel.panel-default.jobs-show-panel{
+padding: 10px;
+background: rgba(255, 255, 255, 0.8);
+}
+.jobs-show-header{
+  position: relative;
+  color:black;
+  top: 10%;
+  text-align: center;
+  
+}
