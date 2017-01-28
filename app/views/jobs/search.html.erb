@@ -1,0 +1,51 @@
+<div class="row">
+	<section class="featured-jobs">
+		<% if @jobs.blank? %>
+		<%= @query_string %>
+		<% else  %>
+		<div class="container">
+			<div class="dropdown clearfix pull-right">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Order
+				<span class="caret"></span>
+				
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+					<li>
+						<%= link_to("Ordered by wage lower bound",jobs_path(:order =>"by_lower_bound")) %>
+					</li>
+					<li>
+						<%= link_to("Ordered by wage upper bound",jobs_path(:order=>"by_upper_bound")) %>
+					</li>
+					<li>
+						<%= link_to("Ordered by created time",jobs_path) %>
+					</li>
+				</ul>
+				
+			</div>
+			
+			
+			<div class="center-block"><h1 style="color:black;">Relative jobs</h1></div>
+			<%  @count = 0 %>
+			<% @jobs.each do |job| %>
+			<% if @count == 0 %>
+			<div class="row">
+			<% end %>
+			<% @count++ %>
+			<%count++ %>
+			 <%= render partial: "job", locals: { job:job } %>
+
+			<% if @count == 2 %>
+			</div>
+			<% @count = 0 %>
+			<% end %>
+			
+			<% end %>
+		</div>
+		<div class="text-center"><%= will_paginate @jobs,renderer: BootstrapPagination::Rails  %></div>
+		<% end %>
+		
+		
+	</section>
+</div>
