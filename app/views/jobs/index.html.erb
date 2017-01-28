@@ -23,7 +23,20 @@
 		</div>
 		<div class="center-block"><h1 style="color:black;">Available jobs</h1></div>
 
-		<%= render :partial=>"job", :collection=>@jobs,:as=>:job %>
+					<%  count = 0 %>
+			<% @jobs.each do |job| %>
+			<% if count == 0 %>
+			<div class="row">
+				<% end %>
+				<% count+=1 %>
+				<%= render partial: "job", locals: { job:job} %>
+				<% if count == 3 %>
+			</div>
+			<% count = 0 %>
+			<% end %>
+			
+			<% end %>
+
 
 	</div>
 	<div class="text-center">
